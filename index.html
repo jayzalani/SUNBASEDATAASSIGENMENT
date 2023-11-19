@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Management App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="screen" id="login-screen">
+    <h1>Assignment by JAYZALANI</h1>
+    <div id="login-error" class="error"></div>
+    <input type="text" id="login_id" placeholder="Login ID">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="screen" id="customer-list-screen">
+    <h1>Customer List</h1>
+    <div id="customer-list-error" class="error"></div>
+    <button onclick="logout()">Logout</button>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Street</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="customer-list-body">
+        <!-- Customer data will be dynamically inserted here -->
+      </tbody>
+    </table>
+    <button onclick="showAddCustomerScreen()">Add Customer</button>
+  </div>
+
+  <div class="screen" id="add-customer-screen">
+    <h1>Add Customer</h1>
+    <div id="add-customer-error" class="error"></div>
+    <input type="text" id="first_name" placeholder="First Name">
+    <input type="text" id="last_name" placeholder="Last Name">
+    <input type="text" id="street" placeholder="Street">
+    <input type="text" id="address" placeholder="Address">
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="state" placeholder="State">
+    <input type="email" id="email" placeholder="Email">
+    <input type="tel" id="phone" placeholder="Phone">
+    <button onclick="addCustomer()">Save</button>
+    <button onclick="cancelAddCustomer()">Cancel</button>
+  </div>
+
+  <div class="screen" id="edit-customer-screen">
+    <h1>Edit Customer</h1>
+    <div id="edit-customer-error" class="error"></div>
+    <input type="hidden" id="edit-customer-uuid">
+    <input type="text" id="edit-first_name" placeholder="First Name">
+    <input type="text" id="edit-last_name" placeholder="Last Name">
+    <input type="text" id="edit-street" placeholder="Street">
+    <input type="text" id="edit-address" placeholder="Address">
+    <input type="text" id="edit-city" placeholder="City">
+    <input type="text" id="edit-state" placeholder="State">
+    <input type="email" id="edit-email" placeholder="Email">
+    <input type="tel" id="edit-phone" placeholder="Phone">
+    <button onclick="saveEditedCustomer()">Save Changes</button>
+    <button onclick="cancelEditCustomer()">Cancel</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
